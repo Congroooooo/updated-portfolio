@@ -4,6 +4,8 @@ A paper-inspired, responsive personal portfolio built with Next.js App Router, T
 
 The light and dark paper themes follow the visitor's system preference on first load. The theme button in the desktop sidebar or mobile header saves an explicit choice in the browser.
 
+Motion for React adds restrained section entrances, a reading-progress line, active section navigation, and animated project filters. The site respects the visitor's reduced-motion setting.
+
 ## Run locally
 
 ```bash
@@ -34,4 +36,4 @@ The portfolio intentionally omits private contact information, unverified FEU pl
 
 ## Project notes
 
-See `docs/` for discovery, design, architecture, and implementation decisions.
+See `docs/` for discovery, design, architecture, implementation, and motion decisions.

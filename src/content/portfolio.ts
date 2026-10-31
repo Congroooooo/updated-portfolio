@@ -11,6 +11,7 @@ export type Project = {
   number: string;
   name: string;
   category: string;
+  kind: "academic" | "hackathon";
   period: string;
   role: string;
   description: string;
@@ -74,6 +75,7 @@ export const projects: Project[] = [
     number: "01",
     name: "PAMO",
     category: "Inventory & ordering system",
+    kind: "academic",
     period: "2025",
     role: "Lead Developer · Full Stack · UI/UX",
     description:
@@ -84,6 +86,7 @@ export const projects: Project[] = [
     number: "02",
     name: "Alertify",
     category: "Hackathon project",
+    kind: "hackathon",
     period: "2025",
     role: "UI/UX · Frontend",
     description:
@@ -94,6 +97,7 @@ export const projects: Project[] = [
     number: "03",
     name: "PreptalkAI",
     category: "Hackathon project",
+    kind: "hackathon",
     period: "2025",
     role: "UI/UX · Frontend",
     description:

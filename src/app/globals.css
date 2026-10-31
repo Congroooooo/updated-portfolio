@@ -65,3 +65,25 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent)}
 :root[data-theme="dark"] .mobile-menu nav{background:#1b211d;border-color:#3e483f}
 :root[data-theme="dark"] .mobile-menu nav a{border-color:#3e483f}
 @media(max-width:800px){.theme-toggle{margin-top:0}}
+
+/* Motion cues: document reading progress and active chapter */
+.reading-progress{position:fixed;z-index:100;top:0;left:0;right:0;height:3px;background:var(--accent);transform-origin:0 50%;pointer-events:none}
+.sidebar__nav a{position:relative}
+.sidebar__nav a::before{content:"";position:absolute;left:-25px;top:50%;width:12px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .28s ease}
+.sidebar__nav a.is-active{color:var(--accent);font-weight:700}
+.sidebar__nav a.is-active::before{transform:scaleX(1)}
+.project-card:hover{transform:none;border-color:#a9a393}
+:root[data-theme="dark"] .project-card:hover{border-color:#967866}
+.hero__links a,.contact-section__email{transition:color .2s ease,border-color .2s ease}
+@media(max-width:800px){.reading-progress{top:0}}
+@media(prefers-reduced-motion:reduce){.reading-progress{display:none}.sidebar__nav a::before,.hero__links a,.contact-section__email{transition:none}}
+
+.project-filters{display:flex;gap:8px;flex-wrap:wrap;padding-top:21px}
+.project-filters button{border:1px solid var(--line);background:transparent;color:var(--muted);padding:9px 13px;font:700 10px Arial,Helvetica,sans-serif;letter-spacing:.1em;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.project-filters button:hover{border-color:var(--accent);color:var(--accent)}
+.project-filters button.is-selected{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.project-card:first-child:not([data-featured="true"]){grid-column:auto;min-height:350px}
+.project-card[data-featured="true"]{grid-column:1/-1;min-height:290px}
+@media(max-width:620px){.project-card[data-featured="true"],.project-card:first-child:not([data-featured="true"]){grid-column:auto;min-height:0}}
+@media(prefers-reduced-motion:reduce){.project-filters button{transition:none}}
+.contact-section__content>p{font-size:13px;color:#ccd2c8;margin:0 0 30px}
