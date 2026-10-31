@@ -1,5 +1,6 @@
 import { experience, profile, projects, recognitions, skillGroups } from "@/content/portfolio";
 import { MobileNavigation } from "@/components/mobile-navigation";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navigation = [
   { href: "#about", label: "Profile", number: "01" },
@@ -56,6 +57,7 @@ export default function Home() {
               </a>
             ))}
           </nav>
+          <ThemeToggle />
           <div className="sidebar__bottom">
             <p>AVAILABLE FOR CONNECTIONS</p>
             <a href={`mailto:${profile.email}`}>{profile.email} <Arrow diagonal /></a>

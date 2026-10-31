@@ -12,6 +12,9 @@ src/
     globals.css       Paper design tokens and responsive styling
     layout.tsx        Root HTML and SEO metadata
     page.tsx          Single-page portfolio composition
+  components/
+    mobile-navigation.tsx  Mobile disclosure menu
+    theme-toggle.tsx       Client-side theme control
   content/
     portfolio.ts      Typed public-facing resume content
 docs/                 Project research and decisions
@@ -19,6 +22,8 @@ public/               Static assets, if approved later
 ```
 
 The page renders as static HTML. Data types and content live in `portfolio.ts`, making it easier to revise resume facts without changing layout logic. The CSS contains the design tokens and small number of component styles; Tailwind is available for future utility use without requiring a UI kit. No runtime icon package is needed for the few typographic arrows in the page.
+
+The theme toggle is the only persistent client interaction. A small inline layout script applies the saved or system theme before paint to avoid a color flash. The toggle updates the root theme attribute and browser storage. The mobile menu has a small client boundary so section selection closes it.
 
 ## SEO, deployment, and validation
 

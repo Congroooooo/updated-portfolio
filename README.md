@@ -2,6 +2,8 @@
 
 A paper-inspired, responsive personal portfolio built with Next.js App Router, TypeScript, and Tailwind CSS.
 
+The light and dark paper themes follow the visitor's system preference on first load. The theme button in the desktop sidebar or mobile header saves an explicit choice in the browser.
+
 ## Run locally
 
 ```bash

@@ -8,6 +8,8 @@ An editorial resume presented as a warm paper sheet on a muted desk. The desktop
 
 Core colors live as CSS custom properties in `src/app/globals.css`: ink `#292a25`, paper `#f8f7f0`, desk `#e8e8e1`, rule `#d8d7cc`, muted text `#6e7067`, and rust accent `#8f4c36`. Georgia provides editorial display type; Arial provides legible body and navigation type. The design uses a small uppercase metadata scale, regular body text, and large serif section titles. Rules and restrained shadows suggest a physical sheet without reducing contrast.
 
+The dark variant uses a deep green-black desk, charcoal paper, warm ivory ink, and a lighter rust accent. Its texture is deliberately faint. A theme toggle appears in the desktop index and mobile header. The first visit follows the system color scheme, and an explicit choice is saved in the browser.
+
 ## Layout specification
 
 1. **Index:** fixed-width sticky rail at desktop widths; compact top bar and disclosure menu below 800 px.
